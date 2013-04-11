@@ -1,27 +1,23 @@
 web1:
   name: l4starter
-  shared_writable_dirs:
-    - /public/uploads
-    - /storage/cache
-    - /storage/database
-    - /storage/logs
-    - /storage/sessions
-    - /storage/views
-    - /storage/work
-  document_root: /public
-  php_version: 5.3.8
+  document_root: public
+  php_version: 5.4.13
   php_extensions:
-    - pdo_mysql
+    - apc
+    - mbstring
     - mcrypt
-    - eaccelerator
-    - memcached
-  db1:
-  name: laravel4
-  type: mysql
-  before_deploy:
-    - "php composer.phar install"
-    - "php artisan migrate:install"
-    - "php artisan migrate"
+    - pdo_mysql
+    - zip
+  shared_writable_dirs:
+    - app/storage/cache
+    - app/storage/logs
+    - app/storage/meta
+    - app/storage/sessions
+    - app/storage/views
+  after_build:
+    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar install"
   after_deploy:
-    - "rm -f storage/cache/*"
-    - "rm -f storage/views/*"
+    - "rm -f app/storage/cache/*"
+    - "rm -f app/storage/views/*"
+  before_deploy:
+    - "php artisan migrate"
