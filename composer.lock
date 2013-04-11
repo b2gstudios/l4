@@ -53,6 +53,56 @@
             "time": "2013-03-03 02:54:09"
         },
         {
+            "name": "filp/whoops",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filp/whoops.git",
+                "reference": "1.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/1.0.0",
+                "reference": "1.0.0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master",
+                "silex/silex": "1.0.*@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Whoops": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Filipe Dobreira",
+                    "homepage": "https://github.com/filp",
+                    "role": "Developer"
+                }
+            ],
+            "description": "php error handling for cool kids",
+            "homepage": "https://github.com/filp/whoops",
+            "keywords": [
+                "error",
+                "exception",
+                "handling",
+                "library",
+                "silex-provider",
+                "whoops"
+            ],
+            "time": "2013-04-09 14:34:25"
+        },
+        {
             "name": "ircmaxell/password-compat",
             "version": "1.0.x-dev",
             "source": {
@@ -97,21 +147,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "4612d11e3f1559b657b6b3351130d1160595c1d4"
+                "reference": "c15bbf3cb5e5c0a0def596f7da3a23864bd69a64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/4612d11e3f1559b657b6b3351130d1160595c1d4",
-                "reference": "4612d11e3f1559b657b6b3351130d1160595c1d4",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/c15bbf3cb5e5c0a0def596f7da3a23864bd69a64",
+                "reference": "c15bbf3cb5e5c0a0def596f7da3a23864bd69a64",
                 "shasum": ""
             },
             "require": {
                 "classpreloader/classpreloader": "1.0.*",
+                "filp/whoops": "1.0.0",
                 "ircmaxell/password-compat": "1.0.*",
                 "monolog/monolog": "1.4.*",
                 "patchwork/utf8": "1.0.*",
                 "php": ">=5.3.7",
-                "predis/predis": "0.*",
+                "predis/predis": "0.8.*",
                 "swiftmailer/swiftmailer": "4.3.*",
                 "symfony/browser-kit": "2.3.*",
                 "symfony/console": "2.3.*",
@@ -190,7 +241,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2013-04-11 02:32:30"
+            "time": "2013-04-11 19:17:27"
         },
         {
             "name": "monolog/monolog",
